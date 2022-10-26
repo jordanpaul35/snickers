@@ -47,7 +47,7 @@ $('form[name=contactForm]').submit(function (e) {
 
     //Send the info to the airtable database
     var Airtable = require('airtable');
-    var base = new Airtable({ apiKey: 'key9C2IN2GPW2OJ1z' }).base('appOFm2WWDsJnPX8Q');
+    var base = new Airtable({ apiKey: 'MYAPIKEY' }).base('appOFm2WWDsJnPX8Q');
 
     //Variables to store info in contact form
     let userName = $("#firstName").val() + " " + $("#lastName").val();
