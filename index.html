@@ -1,0 +1,181 @@
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Snickers Contest</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script src="js/airtable.browser.js"></script>
+    <script src="https://kit.fontawesome.com/1cccf1816c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!--Header-->
+    <div class="navBar">
+
+        <img src="images/Snickers-Logo.png" class="logo" />
+
+        <div class="navBtnHolder">
+
+            <div class="navBtn">HOW TO WIN</div>
+            <div class="navBtn">FAQ</div>
+            <div class="navBtn">MORE ABOUT SNICKERS</div>
+        </div>
+
+        <i class="fas fa-bars hamburgerMenu"></i>
+    </div>
+
+
+    <!--Full screen image-->
+    <div class="mainImage">
+
+        <div class="mainImageText">ENTER TO WIN FREE SNICKERS FOR LIFE!</div>
+        <div class="purpleBtn imageBtn">SIGN ME UP!</div>
+    </div>
+
+
+
+
+    <div class="container-fluid">
+
+        <!--Middle row with image and text-->
+        <div class="row purpleRow">
+
+            <div class="col-lg-4 centerThis">
+
+                <img src="images/snickers.png" class="purpleRowImage" />
+            </div>
+
+            <div class="col-lg-8 centerThis">
+
+                <div class="rowText">IT'S SCARY HOW GOOD THIS CONTEST IS....</div>
+            </div>
+        </div>
+
+
+        <!--Contact Form-->
+        <div class="row contactFormRow" id="contactForm">
+
+            <div class="contactTitle">ENTER YOUR DETAILS BELOW!</div>
+
+            <form class="row g-3 contactForm" name="contactForm">
+
+                <div class="col-md-6">
+                    <label for="validationDefault01" class="form-label">First name</label>
+                    <input type="text" pattern="[a-zA-Z]+" class="form-control" id="firstName" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="validationDefault02" class="form-label">Last name</label>
+                    <input type="text" pattern="[a-zA-Z'-]+" class="form-control" id="lastName" required>
+                </div>
+
+                <div class="col-md-12">
+                    <label for="validationDefault03" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="validationDefault04" class="form-label">State</label>
+                    <select class="form-select" id="state" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DC">District of Columbia</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="IA">Iowa</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MD">Maryland</option>
+                        <option value="ME">Maine</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MT">Montana</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NY">New York</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="PR">Puerto Rico</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VA">Virginia</option>
+                        <option value="VT">Vermont</option>
+                        <option value="WA">Washington</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="validationDefault05" class="form-label">Zip</label>
+                    <input type="text" pattern="[0-9]{5}" class="form-control" id="zipCode" required>
+                </div>
+
+                <div class="col-12 centerThis">
+
+                    <button class="purpleBtn formBtn" type="submit">SUBMIT</button>
+                </div>
+            </form>
+
+            <!--Feedback text - hidden until form is submitted-->
+            <div class="col-md-12 centerThis">
+
+                <div class="feedbackText">GOOD LUCK!</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+
+        <!--Social media icons-->
+        <i class="fab fa-facebook footerIcon"></i>
+        <i class="fab fa-instagram footerIcon"></i>
+        <i class="fab fa-youtube footerIcon"></i>
+        <i class="fab fa-twitter footerIcon"></i>
+
+    </div>
+
+</body>
+
+
+<script src="js/script.js"></script>
